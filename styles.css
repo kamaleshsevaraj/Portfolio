@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8b7e7e;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+nav h1 {
+    display: inline;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    float: right;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px 10;
+    background: #ffffff;
+    margin-bottom: 2px;
+    border-bottom: #ccc 1px solid;
+}
+
+h2 {
+    color: #272c28;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.home .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+
+.about-me {
+    width: 50%;
+}
+
+
+
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 38%;
+    margin: 1%;
+    padding: 5px;
+    background-color: #f5f0f2;
+    border: 0px solid #faf3f3;
+    box-shadow: 0 2px 4px rgba(230, 225, 225, 0.1);
+    text-align: left;
+    font-weight: bold;
+}
+
+.profile-pic {
+    width: 35%;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-container {
+    border: 1px solid #ccc; /* Border around the container */
+    padding: 10px; /* Padding inside the container */
+    text-align: center; /* Center-align content */
+}
+
+.footer-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the default text color */
+    margin: 0 5px; /* Margin between links */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Add underline on hover if needed */
+}
+.skill-item {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+    background-color: #84afcc; /* Change to the color you prefer */
+}

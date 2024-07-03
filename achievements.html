@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalesh S | Achievements</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        .achievement {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dddddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        .achievement img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .achievement h3 {
+            margin-top: 0;
+        }
+        .achievement p {
+            margin-top: 10px;
+        }
+        /* Hover effect */
+        .achievement:hover {
+            background-color: #f0f0f0; /* Light grey background on hover */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Kamalesh S</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="patents.html">Certificate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievement" onclick="showModal('img1')">
+                <img src="imc.jpg" alt="Indian Mobile Congress 2023" id="img1">
+                <div>
+                    <h3>INDIAN MOBILE CONGRESS (IMC) 2023</h3>
+                    <p>Displayed Our Project on <b>“INDIAN MOBILE CONGRESS (IMC) 2023"</b> - 7th edition inaugurated by <b>“PRIME MINISTER Shri NARENDRA MODI”,</b> which conducted by <b>DoT/TCOE India.</b></p>
+                </div>
+            </div>
+            <div class="achievement" onclick="showModal('img2')">
+                <img src="Hazardous Gas Detection System(Patent Published)_page-0001.jpg" alt="hazardous gas detection kit using RF communication" id="img2">
+                <div>
+                    <h3>Published a patent for a hazardous gas detection kit using RF communication</h3>
+                    <p>Developed and patented a portable device for detecting hazardous gases in industrial environments, enhancing workplace safety.</p>
+                </div>
+            </div>
+            <div class="achievement" onclick="showModal('img3')">
+                <img src="Battery Swapping System(Patent Published)_page-0001.jpg" alt="VTOL UAV Aerial Docking System" id="img3">
+                <div>
+                    <h3>Published a patent for an aerial docking and battery swapping system for VTOL UAVs</h3>
+                    <p>Designed and patented an automated system for VTOL UAVs to autonomously dock and swap batteries, extending flight durations.</p>
+                </div>
+            </div>
+            <div class="achievement" onclick="window.location.href='https://ieeexplore.ieee.org/document/10511114'">
+                <img src="ieee.png" alt="IEEE Conference" id="img4">
+                <div>
+                    <h3>Co-authored research on RFID technology for retail automation, IEEE Conference, 2024</h3>
+                    <p>"Automated Shopping with RFID-Enhanced Smart Technology," IEEE Conference, 2024. Co-authored a research paper presented at an IEEE conference, which explores the use of RFID technology to enhance retail automation processes.</p>
+                </div>
+            </div>
+            <div class="achievement" onclick="showModal('img5')">
+                <img src="landt.jpg" alt="A Secure and User-Friendly Web Platform for MRI Scan Analysis and Verification" id="img5">
+                <div>
+                    <h3>A Secure and User-Friendly Web Platform for MRI Scan Analysis and Verification</h3>
+                    <p>I participated in the L&T Contest and I've been selected to advance to the presentation round.</p>
+                </div>
+            </div>
+            <div class="achievement" onclick="showModal('img6')">
+                <img src="UAV_Tone KAMALESH S (1)_page-0001.jpg" alt="DoBaSS-UAV" id="img6">
+                <div>
+                    <h3>DoBaSS-UAV</h3>
+                    <p>I am thrilled to announce that I have successfully cleared Stage-1 of the national-level competition 'DoBaSS-UAV'.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="event.stopPropagation(); closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>Kamalesh S | B.E-ECE</p>
+            <a class="footer-link" href="https://www.linkedin.com/in/kamalesh-selvaraj/">LinkedIn</a> |
+            <a class="footer-link" href="https://drive.google.com/file/d/1v-Q3Rt8sl2XkNVkEsd8qHUQd8wcnwHQ2/view?usp=drive_link">Resume</a> |
+            <a class="footer-link" href="https://github.com/kamaleshsevaraj">Git Hub</a>
+        </div>
+    </footer>
+
+    <script>
+        function showModal(imgId) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modal-img");
+            var img = document.getElementById(imgId);
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

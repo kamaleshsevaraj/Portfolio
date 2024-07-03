@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalesh S | Certifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        .patent-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .patent {
+            flex: 0 0 calc(50% - 20px);
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        .patent img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .patent-content {
+            flex: 1;
+        }
+        .patent h3 {
+            margin-top: 0;
+        }
+        .patent p {
+            margin-top: 10px;
+        }
+        /* Hover effect */
+        .patent:hover {
+            background-color: #f0f0f0; /* Light grey background on hover */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Kamalesh S</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="patents.html">Certifications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="patent-container">
+                <div class="patent" onclick="showModal('img1')">
+                    <img src="java full stack developer in wipro_page-0001.jpg" alt="Java Full Stack" id="img1">
+                    <div class="patent-content">
+                        <h3>Java Full Stack Developer</h3>
+                        <p>Certified as a Java Full Stack Developer at Wipro.</p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="patent-container">
+                <div class="patent" onclick="showModal('img2')">
+                    <img src="nptel.jpg" alt="Introduction to Industry 4.0 and Industrial Internet of Things" id="img2">
+                    <div class="patent-content">
+                        <h3>Introduction to Industry 4.0 and IIoT</h3>
+                        <p>Completed an NPTEL online certification with a score of 58%.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>Kamalesh S | B.E-ECE</p>
+            <a class="footer-link" href="https://www.linkedin.com/in/kamalesh-selvaraj/">LinkedIn</a> |
+            <a class="footer-link" href="https://drive.google.com/file/d/1v-Q3Rt8sl2XkNVkEsd8qHUQd8wcnwHQ2/view?usp=drive_link">Resume</a> |
+            <a class="footer-link" href="https://github.com/kamaleshsevaraj">Git Hub</a>
+        </div>
+    </footer>
+
+    <script>
+        function showModal(imgId) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("modal-img");
+            var img = document.getElementById(imgId);
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
